@@ -220,7 +220,7 @@ class LoadModelDemo {
     _LoadAnimatedModel() {
       const loader = new FBXLoader();
       loader.setPath('./chars/');
-      loader.load('Ch01_nonPBR.fbx', (fbx) => {
+      loader.load('vrperson1.fbx', (fbx) => {
         fbx.scale.setScalar(0.1);
         fbx.traverse(c => {
           c.castShadow = true;
