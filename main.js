@@ -205,7 +205,8 @@ class LoadModelDemo {
       this._mixers = [];
       this._previousRAF = null;
   
-      this._LoadAnimatedModel();
+      this._LoadAnimatedModel('vrperson1hs.fbx');
+      this._LoadAnimatedModel('Ch01_nonPBR.fbx')
       //this._LoadAnimatedModelAndPlay(
       //       './chars/', './anims/', 'Ch01_nonPBR.fbx', 'Typing.fbx', new THREE.Vector3(0, -1.5, 5));
       // this._LoadAnimatedModelAndPlay(
@@ -217,10 +218,10 @@ class LoadModelDemo {
       this._RAF();
     }
   
-    _LoadAnimatedModel() {
+    _LoadAnimatedModel(filetoload) {
       const loader = new FBXLoader();
       loader.setPath('./chars/');
-      loader.load('vrperson1.fbx', (fbx) => {
+      loader.load(filetoload, (fbx) => {
         fbx.scale.setScalar(0.1);
         fbx.traverse(c => {
           c.castShadow = true;
