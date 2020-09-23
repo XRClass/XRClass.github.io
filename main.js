@@ -83,6 +83,8 @@ class LoadModelDemo {
       this._previousRAF = null;
   
       this._LoadAnimatedModel();
+      this._LoadAnimatedModelAndPlay(
+             './chars/', 'Ch01_nonPBR.fbx', 'Typing.fbx', new THREE.Vector3(0, -1.5, 5));
       // this._LoadAnimatedModelAndPlay(
       //     './resources/dancer/', 'girl.fbx', 'dance.fbx', new THREE.Vector3(0, -1.5, 5));
       // this._LoadAnimatedModelAndPlay(
