@@ -60,12 +60,12 @@ class LoadModelDemo {
   
       const loader = new THREE.CubeTextureLoader();
       const texture = loader.load([
-          './cubemaps/CM1/posx.jpg',
-          './cubemaps/CM1/negx.jpg',
-          './cubemaps/CM1/posy.jpg',
-          './cubemaps/CM1/negy.jpg',
-          './cubemaps/CM1/posz.jpg',
-          './cubemaps/CM1/negz.jpg',
+          './cubemaps/imgs/CM1/posx.jpg',
+          './cubemaps/imgs/CM1/negx.jpg',
+          './cubemaps/imgs/CM1/posy.jpg',
+          './cubemaps/imgs/CM1/negy.jpg',
+          './cubemaps/imgs/CM1/posz.jpg',
+          './cubemaps/imgs/CM1/negz.jpg',
       ]);
       this._scene.background = texture;
   
