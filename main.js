@@ -94,7 +94,7 @@ class LoadModelDemo {
   
     _LoadAnimatedModel() {
       const loader = new FBXLoader();
-      loader.setPath('./chars');
+      loader.setPath('./chars/');
       loader.load('Ch01_nonPBR.fbx', (fbx) => {
         fbx.scale.setScalar(0.1);
         fbx.traverse(c => {
@@ -108,7 +108,7 @@ class LoadModelDemo {
         this._controls = new BasicCharacterControls(params);
   
         const anim = new FBXLoader();
-        anim.setPath('./anims');
+        anim.setPath('./anims/');
         anim.load('Typing.fbx', (anim) => {
           const m = new THREE.AnimationMixer(fbx);
           this._mixers.push(m);
