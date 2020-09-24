@@ -1,0 +1,30 @@
+# Blender MTL File: 'vrperson1.blend'
+# Material Count: 2
+
+newmtl Ch01_body
+Ns 179.999996
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Normal.png
+map_Kd C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Diffuse.png
+map_Ks C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Specular.png
+map_Ns C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Glossiness.png
+map_d C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Diffuse.png
+
+newmtl Ch01_hair
+Ns 179.999996
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Normal.png
+map_Kd C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Diffuse.png
+map_d C:\\home\\app\\mixamo-mini\\tmp\\skins_85032cf1-6913-4ec5-b4e4-332ba8af2ac7.fbm\\Ch01_1001_Diffuse.png

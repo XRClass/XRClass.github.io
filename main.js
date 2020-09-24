@@ -205,9 +205,9 @@ class LoadModelDemo {
       this._mixers = [];
       this._previousRAF = null;
   
-      //this._LoadAnimatedModel('vrperson1hs.fbx');
+      this._LoadAnimatedModel('vrperson2.fbx');
       //this._LoadAnimatedModel('Ch01_nonPBR.fbx')
-      this._LoadModel();
+      //this._LoadModel();
       //this._LoadAnimatedModelAndPlay(
       //       './chars/', './anims/', 'Ch01_nonPBR.fbx', 'Typing.fbx', new THREE.Vector3(0, -1.5, 5));
       // this._LoadAnimatedModelAndPlay(
@@ -236,7 +236,7 @@ class LoadModelDemo {
   
         const anim = new FBXLoader();
         anim.setPath('./anims/');
-        anim.load('Typing.fbx', (anim) => {
+        anim.load('Typing (1).fbx', (anim) => {
           const m = new THREE.AnimationMixer(fbx);
           this._mixers.push(m);
           const idle = m.clipAction(anim.animations[0]);
