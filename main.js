@@ -220,12 +220,22 @@ class LoadModelDemo {
     }
   
     _LoadAnimatedModel(filetoload) {
+      let sprite = new THREE.TextureLoader().load( './chars/Ch01_1001_Diffuse.png' );
+      let starMaterial = new THREE.PointsMaterial({
+        color: 0xaaaaaa,
+        size: 0.7,
+        map: sprite
+        /*skinning: true*/
+      });
       const loader = new FBXLoader();
       loader.setPath('./chars/');
       loader.load(filetoload, (fbx) => {
         fbx.scale.setScalar(0.1);
+        //fbx.getObjectByName( 'body' ).material = starMaterial;
         fbx.traverse(c => {
           c.castShadow = true;
+          if(c.map)
+            c.map.texture = sprite;
         });
   
         const params = {
