@@ -205,8 +205,9 @@ class LoadModelDemo {
       this._mixers = [];
       this._previousRAF = null;
   
-      this._LoadAnimatedModel('vrperson1hs.fbx');
-      this._LoadAnimatedModel('Ch01_nonPBR.fbx')
+      //this._LoadAnimatedModel('vrperson1hs.fbx');
+      //this._LoadAnimatedModel('Ch01_nonPBR.fbx')
+      this._LoadModel();
       //this._LoadAnimatedModelAndPlay(
       //       './chars/', './anims/', 'Ch01_nonPBR.fbx', 'Typing.fbx', new THREE.Vector3(0, -1.5, 5));
       // this._LoadAnimatedModelAndPlay(
@@ -269,7 +270,7 @@ class LoadModelDemo {
   
     _LoadModel() {
       const loader = new GLTFLoader();
-      loader.load('./resources/thing.glb', (gltf) => {
+      loader.load('./chars/vrperson.glb', (gltf) => {
         gltf.scene.traverse(c => {
           c.castShadow = true;
         });
