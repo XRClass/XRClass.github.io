@@ -1,8 +1,20 @@
-  
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ 
 body {
     height: 100vh;
     margin: 0;
-    color:transparent
+    color:transparent;
+}
+
+section{
+    /*width: 100%;
+    height: 100vh;*/
+    background-color: transparent;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
 }
 
 canvas {
@@ -10,9 +22,95 @@ canvas {
     position: absolute;
     top:0;
     left:0;
-    z-index: 0;
+    z-index: -1;
+}
+/*Header*/
+
+header{
+	position: absolute;
+	left:0px;
+	right:0px;
+	border-bottom: 1px solid #423940;
+	padding:0px 15px;
+	z-index:11;
+}
+header.fixed{
+	background-color: #ffffff;
+	position: fixed;
+	border-color: #000000ad;
+	animation: fixHeader .5s ease;
+	z-index: 11;
+}
+
+@keyframes fixHeader{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+	transform: translateY(0%);	
+	}
+}
+
+header .row{
+	justify-content: space-between;
+	align-items: center;
+}
+header .brand-name a{
+   text-decoration: none;
+   font-size: 22px;
+   font-weight: 600;
+   color:#000000;
+   text-transform: uppercase;
+   position: relative;
+}
+header.fixed .brand-name a{
+	color:#000000;
+}
+header .navbar ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+header .navbar ul li{
+	display: inline-block;
+	margin-left:35px;
+}
+header .navbar ul li a{
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 72px;
+	color:#000000;
+	display: block;
+	font-weight: 600;
+	position: relative;
+}
+header.fixed .navbar ul li a{
+  color:#000000;
+}
+
+header .navbar ul li a::before{
+   content: '';
+   height: 3px;
+   background-color: #ffffff;
+   width:0%;
+   position: absolute;
+   right:0px;
+   bottom:-1px;
+   transition: all .5s ease;
+}
+header.fixed .navbar ul li a::before{
+	background-color: #000000;
+}
+header .navbar ul li a:hover::before{
+	width:100%;
+	left:0;
+}
+header .navbar ul li a.active::before{
+	width:100%;
+	left:0;
 }
 .home{
+    background-color: transparent;
 	min-height: 100vh;
 	background-position: 1000px 500px; 
 	background-attachment: fixed;

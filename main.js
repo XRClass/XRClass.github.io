@@ -2,6 +2,7 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.mod
 
 import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
 import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js';
+//import {ColladaLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/controls/ColladaLoader.js';
 import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
 
 class BasicCharacterControls {
@@ -150,10 +151,11 @@ class LoadModelDemo {
   
       const fov = 60;
       const aspect = 1920 / 1080;
-      const near = 1.0;
+      const near = 0.2;
       const far = 1000.0;
       this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      this._camera.position.set(8.604782083886219, 10.964200607026564, 4.403389191354199);
+      this._camera.position.set(10, 15, 0);
+      //this._camera.quaternion.set
   
       this._scene = new THREE.Scene();
   
@@ -179,7 +181,7 @@ class LoadModelDemo {
   
       const controls = new OrbitControls(
         this._camera, this._threejs.domElement);
-      controls.target.set(0, 20, 0);
+      //controls.target.set(0, 20, 0);
       controls.update();
   
       const loader = new THREE.CubeTextureLoader();
@@ -284,13 +286,13 @@ class LoadModelDemo {
     }
   
     _LoadModel() {
-      const loader = new GLTFLoader();
+      /*const loader = new GLTFLoader();
       loader.load('./chars/vrperson.glb', (gltf) => {
         gltf.scene.traverse(c => {
           c.castShadow = true;
         });
         this._scene.add(gltf.scene);
-      });
+      });*/
     }
   
     _OnWindowResize() {
