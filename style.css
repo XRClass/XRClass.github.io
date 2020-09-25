@@ -2,6 +2,7 @@
 body {
     height: 100vh;
     margin: 0;
+    color:transparent
 }
 
 canvas {
@@ -9,7 +10,7 @@ canvas {
     position: absolute;
     top:0;
     left:0;
-    z-index: -1;
+    z-index: 0;
 }
 .home{
 	min-height: 100vh;
@@ -18,5 +19,6 @@ canvas {
 	background-image: url("images/drvrimages5.jpg");
 	background-size:cover;
 	background-position: center;
-	padding:15px;
+    padding:15px;
+    background-color:transparent
 }

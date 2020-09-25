@@ -205,7 +205,7 @@ class LoadModelDemo {
       this._mixers = [];
       this._previousRAF = null;
   
-      this._LoadAnimatedModel('vrperson2.fbx');
+      this._LoadAnimatedModel('vrpers.fbx');
       //this._LoadAnimatedModel('Ch01_nonPBR.fbx')
       //this._LoadModel();
       //this._LoadAnimatedModelAndPlay(
@@ -234,8 +234,10 @@ class LoadModelDemo {
         //fbx.getObjectByName( 'body' ).material = starMaterial;
         fbx.traverse(c => {
           c.castShadow = true;
-          if(c.map)
-            c.map.texture = sprite;
+          //if(c.map)
+            //c.map.texture = sprite;
+          //else
+            //fbx.geto
         });
   
         const params = {
