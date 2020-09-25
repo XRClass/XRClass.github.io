@@ -135,6 +135,7 @@ class LoadModelDemo {
     _Initialize() {
       this._threejs = new THREE.WebGLRenderer({
         antialias: true,
+        alpha: true
       });
       this._threejs.shadowMap.enabled = true;
       this._threejs.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -152,11 +153,11 @@ class LoadModelDemo {
       const near = 1.0;
       const far = 1000.0;
       this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      this._camera.position.set(75, 20, 0);
+      this._camera.position.set(8.604782083886219, 10.964200607026564, 4.403389191354199);
   
       this._scene = new THREE.Scene();
   
-      let light = new THREE.DirectionalLight(0xFFFFFF, 1.0);
+      let light = new THREE.DirectionalLight(0xFFFFFF, .03);
       light.position.set(20, 100, 10);
       light.target.position.set(0, 0, 0);
       light.castShadow = true;
@@ -190,17 +191,19 @@ class LoadModelDemo {
           './imgs/cubemaps/CM1/posz.jpg',
           './imgs/cubemaps/CM1/negz.jpg',
       ]);
-      this._scene.background = texture;
+      //this._scene.background = texture;
+      //this._scene.background
   
-      const plane = new THREE.Mesh(
-          new THREE.PlaneGeometry(100, 100, 10, 10),
-          new THREE.MeshStandardMaterial({
-              color: 0x202020,
-            }));
-      plane.castShadow = false;
-      plane.receiveShadow = true;
-      plane.rotation.x = -Math.PI / 2;
-      this._scene.add(plane);
+      //const plane = new THREE.Mesh(
+      //    new THREE.PlaneGeometry(100, 100, 10, 10),
+      //    new THREE.MeshStandardMaterial({
+      //        color: 0x202020,
+      //      }));
+      //renderer.setClearColor( 0x000000, 0 ); // the default
+      //plane.castShadow = false;
+      //plane.receiveShadow = true;
+      //plane.rotation.x = -Math.PI / 2;
+      //this._scene.add(plane);
   
       this._mixers = [];
       this._previousRAF = null;
@@ -293,6 +296,7 @@ class LoadModelDemo {
     _OnWindowResize() {
       this._camera.aspect = window.innerWidth / window.innerHeight;
       this._camera.updateProjectionMatrix();
+      console.log(this._camera.position);
       this._threejs.setSize(window.innerWidth, window.innerHeight);
     }
   
@@ -326,4 +330,5 @@ class LoadModelDemo {
 
 window.addEventListener('DOMContentLoaded', () => {
   _APP = new LoadModelDemo();
+  _APP._Initialize();
 });
