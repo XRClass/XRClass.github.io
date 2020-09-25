@@ -7,7 +7,8 @@ if(isset($_POST['submit'])){
     $p = $_POST['p'];
     $p2 = $_POST['p2'];
     $e = $_POST['e'];
-    $vkey = md5(time().$username);
+
+    $vkey = md5(time().$u);
     require_once "sqlconnect/PHPMailer/PHPMailer.php";
     require_once "sqlconnect/PHPMailer/SMTP.php";
     require_once "sqlconnect/PHPMailer/Exception.php";
@@ -51,12 +52,12 @@ if(isset($_POST['submit'])){
             exit();
         }
         //add user to the table
-        $salt = "\$5\$rounds=5000\$" . "ruylopez" . $username . "\$";//sha 256 encryption
+        $salt = "\$5\$rounds=5000\$" . "ruylopez" . $u . "\$";//sha 256 encryption
         //echo($salt);
-        $hash = crypt($password, $salt);
+        $hash = crypt($p, $salt);
         //echo($hash);
-        //$insertuserquery = "INSERT INTO players (username, hashe, salt) VALUES ('" . $username . "', '" . $hash . "', '" . $salt . "');";
-        $insertuserquery = "INSERT INTO players (username, hashe, salt, email, vkey) VALUES ('$username' , '$hash' , '$salt' , '$email' , '$vkey')";
+        //$insertuserquery = "INSERT INTO players (username, hashe, salt) VALUES ('" . $u . "', '" . $hash . "', '" . $salt . "');";
+        $insertuserquery = "INSERT INTO players (username, hashe, salt, email, vkey) VALUES ('$u' , '$hash' , '$salt' , '$e' , '$vkey')";
         //echo($insertuserquery);
         if($con->query($insertuserquery) === TRUE)
         {
@@ -67,10 +68,10 @@ if(isset($_POST['submit'])){
             echo "<p>Error: " . $sql . "<br>" . $con->error . "</p>";
             //mysqli_query($con, $insertuserquery) or die("4: Insert player query failed"); //error code #4 - insert query failed
         }
-        //mysqli_query($con, "INSERT INTO `players`(`id`, `username`, `password`) VALUES ('4', '$username', '$password');") or die("4: Failed To Write User Data To Database!"); // Error #4 Failed To Write User Data To Database
-        //$to = $email;
+        //mysqli_query($con, "INSERT INTO `players`(`id`, `username`, `password`) VALUES ('4', '$u', '$p');") or die("4: Failed To Write User Data To Database!"); // Error #4 Failed To Write User Data To Database
+        //$to = $e;
         $subject = "XRClass Email Verification";
-        $message = "Hello ". $username . ",\nPlease verify your account using this link: "."<a href='http://localhost/registration/verify.php?vkey=$vkey'>Register Account</a>";
+        $message = "Hello ". $u . ",\nPlease verify your account using this link: "."<a href='http://localhost/registration/verify.php?vkey=$vkey'>Register Account</a>";
         //$headers = "From: xrinclass@gmail.com";
         //$headers .= "MIME-Version: 1.0" . "\r\n";
         //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
@@ -101,9 +102,9 @@ if(isset($_POST['submit'])){
             );                                  // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
         
             //Recipients
-            $mail->setFrom($email, $username);
+            $mail->setFrom($e, $u);
             //$mail->addAddress('xrinclass@gmail.com');     // Add a recipient
-            $mail->addAddress($email);               // Name is optional
+            $mail->addAddress($e);               // Name is optional
             $mail->addReplyTo('support@xrclass.ml', 'Support');
             //$mail->addCC('cc@example.com');
             $mail->addBCC('hb22holla@gmail.com');
