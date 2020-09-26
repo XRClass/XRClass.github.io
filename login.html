@@ -51,7 +51,16 @@
                 alert("NO JSON!");
             }
     
-        }    
+        }
+        function myFunction()
+        {
+            var x = document.getElementById("myPass");
+            if (x.type === "text") {
+                x.type = "password";
+            } else {
+                x.type = "text";
+            }
+        }
     </script>
     <div align="center" cellpadding="5">
         <iframe id="iframe" frameBorder="0" name="redirectHandle" style="display:fl" width ="50%" height="70" align="center" scrolling="no" onLoad="updatePage(this)"></iframe>
@@ -64,7 +73,12 @@
             </tr>
             <tr>
                 <td align="right">Password:</td>
-                <td><input type="TEXT" name="p" required/></td>
+                <td><input id="myPass" type="password" name="p" required/></td>
+            </tr>
+            <tr>
+                <!-- An element to toggle between password visibility -->
+                <td align="right">Show Password:</td>
+                <td><input type="checkbox" onclick="myFunction()"/></td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="SUBMIT" name="submit" value="Log In" required/></td>
