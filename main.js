@@ -253,7 +253,7 @@ class LoadModelDemo {
   
         const anim = new FBXLoader();
         anim.setPath('./anims/');
-        anim.load('Typing (1).fbx', (anim) => {
+        anim.load('Leaning.fbx', (anim) => {
           const m = new THREE.AnimationMixer(fbx);
           this._mixers.push(m);
           const idle = m.clipAction(anim.animations[0]);
