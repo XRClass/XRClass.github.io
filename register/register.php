@@ -4,7 +4,6 @@ $error = NULL;
 if(isset($_POST['submit'])){
     //Get form data
     $u = $_POST['u'];
-    echo $u;
     $p = $_POST['p'];
     $p2 = $_POST['p2'];
     $e = $_POST['e'];
