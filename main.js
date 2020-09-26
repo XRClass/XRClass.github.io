@@ -154,7 +154,7 @@ class LoadModelDemo {
       const near = 0.2;
       const far = 1000.0;
       this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      this._camera.position.set(10, 15, 0);
+      this._camera.position.set(7, 15, 0);
       //this._camera.quaternion.set
   
       this._scene = new THREE.Scene();
@@ -225,13 +225,13 @@ class LoadModelDemo {
     }
   
     _LoadAnimatedModel(filetoload) {
-      let sprite = new THREE.TextureLoader().load( './chars/Ch01_1001_Diffuse.png' );
+      /*let sprite = new THREE.TextureLoader().load( './chars/Ch01_1001_Diffuse.png' );
       let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
         size: 0.7,
         map: sprite
         /*skinning: true*/
-      });
+      //});
       const loader = new FBXLoader();
       loader.setPath('./chars/');
       loader.load(filetoload, (fbx) => {
@@ -264,7 +264,7 @@ class LoadModelDemo {
     }
   
     _LoadAnimatedModelAndPlay(path,path2, modelFile, animFile, offset) {
-      const loader = new FBXLoader();
+      /*const loader = new FBXLoader();
       loader.setPath(path);
       loader.load(modelFile, (fbx) => {
         fbx.scale.setScalar(0.1);
@@ -282,7 +282,7 @@ class LoadModelDemo {
           idle.play();
         });
         this._scene.add(fbx);
-      });
+      });*/
     }
   
     _LoadModel() {
@@ -332,5 +332,5 @@ class LoadModelDemo {
 
 window.addEventListener('DOMContentLoaded', () => {
   _APP = new LoadModelDemo();
-  _APP._Initialize();
+  //_APP._Initialize();
 });
