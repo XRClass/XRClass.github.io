@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XR Class Log In</title>
     <link rel="icon" href="imgs/logo_size.v1.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <form method="POST" action="https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/login/login.php">
+    <script>
+        /*$('#submit').click(function() {
+            $.ajax({
+                url: 'https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/login/login.php',
+                type: 'POST',
+                data: {
+                    email: 'email@example.com',
+                    message: 'hello world!'
+                },
+                success: function(msg) {
+                    alert('Email Sent');
+                }               
+            });
+        });*/
+    </script>
+    <iframe name="redirectHandle" style="display:none;"></iframe>
+    <form method="POST" id="sendForm" target="redirectHandle" action="https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/login/login.php">
         <table border="0" align="center" cellpadding="5">
             <tr>
                 <td align="right">Username:</td>
