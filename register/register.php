@@ -14,11 +14,11 @@ if(isset($_POST['submit'])){
     require_once "sqlconnect/PHPMailer/Exception.php";
 
     if(strlen($u) < 8) {
-        $error = "<p>Your username must be t least 8 characters</p>";
+        $error = "<p style='color:red;'>Your username must be at least 8 characters</p>";
     }
     else if ($p2 != $p)
     {
-        $error .= "<p>Your passwords do not match</p>";
+        $error .= "<p style='color:red;'>Your passwords do not match</p>";
     }
     else{
         //Form is valid
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
         $con = mysqli_connect('bqbxbuerhzolifexxeim-mysql.services.clever-cloud.com', 'ur31kfvnrvrocgdy', 'fdZgRxAydtLaR9c3HhLe', 'bqbxbuerhzolifexxeim');
         if(mysqli_connect_errno())
         {
-            echo "<p>1: Connection failed</p>"; //error code #1 = connection failed
+            echo "<p style='color:red;'>1: Connection failed</p>"; //error code #1 = connection failed
             exit();
         }
         //check if name exists
@@ -42,13 +42,13 @@ if(isset($_POST['submit'])){
 
         if(mysqli_num_rows($namecheck) > 0)
         {
-            echo "<p>3: Name already exists</p>";//error code # 3  name exists cannot register
+            echo "<p style='color:red;'>3: Name already exists</p>";//error code # 3  name exists cannot register
             exit();
         }
 
         if(mysqli_num_rows($emailcheck) > 0)
         {
-            echo "<p>9: Email already exists</p>";//error code # 9  email exists cannot register
+            echo "<p style='color:red;'>9: Email already exists</p>";//error code # 9  email exists cannot register
             exit();
         }
         //add user to the table
@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
         }
         else{
             //THE KEYYYYY:    
-            echo "<p>Error: " . $sql . "<br>" . $con->error . "</p>";
+            echo "<p style='color:red;'>Error: " . $sql . "<br>" . $con->error . "</p>";
             //mysqli_query($con, $insertuserquery) or die("4: Insert player query failed"); //error code #4 - insert query failed
         }
         //mysqli_query($con, "INSERT INTO `players`(`id`, `username`, `password`) VALUES ('4', '$u', '$p');") or die("4: Failed To Write User Data To Database!"); // Error #4 Failed To Write User Data To Database
@@ -122,12 +122,12 @@ if(isset($_POST['submit'])){
             $mail->send();
             //echo 'Message has been sent';
         } catch (Exception $e) {
-            echo "<p>B: INVALID EMAIL</p>";//"A: Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "<p style='color:red;'>B: INVALID EMAIL</p>";//"A: Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
 
         //header('location:thankyou.php');
-        echo("0");
+        echo("<p style='color:red;'>User Account Created Successfully");
     }
 }
 ?>
