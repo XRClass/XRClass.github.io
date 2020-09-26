@@ -31,9 +31,9 @@
     </script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
-        //$('#iframe').on('load', function() {
-        //    alert('frame has (re)loaded ');
-        //});
+        $('#iframe').on('load', function() {
+            alert('frame has (re)loaded ');
+        });
         function updatePage(obj) {
         
             //jQuery(document).ready(function($) {
@@ -54,7 +54,7 @@
         }    
     </script>
     <div align="center" cellpadding="5">
-        <iframe frameBorder="0" name="redirectHandle" style="display:fl" width ="50%" height="70" align="center" scrolling="no" onLoad="updatePage(this)"></iframe>
+        <iframe id="iframe" frameBorder="0" name="redirectHandle" style="display:fl" width ="50%" height="70" align="center" scrolling="no" onLoad="updatePage(this)"></iframe>
     </div>
     <form method="POST" id="sendForm" target="redirectHandle" action="https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/login/login.php">
         <table border="0" align="center" cellpadding="5">
