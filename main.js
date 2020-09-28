@@ -154,7 +154,7 @@ class LoadModelDemo {
       const near = 0.2;
       const far = 1000.0;
       this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      this._camera.position.set(7, 15, 0);
+      this._camera.position.set(5, 7, 4);
       //this._camera.quaternion.set
   
       this._scene = new THREE.Scene();
@@ -181,10 +181,10 @@ class LoadModelDemo {
   
       const controls = new OrbitControls(
         this._camera, this._threejs.domElement);
-      //controls.target.set(0, 20, 0);
+      controls.target.set(0, 12, 0);
       controls.update();
   
-      const loader = new THREE.CubeTextureLoader();
+      /*const loader = new THREE.CubeTextureLoader();
       const texture = loader.load([
           './imgs/cubemaps/CM1/posx.jpg',
           './imgs/cubemaps/CM1/negx.jpg',
@@ -192,7 +192,7 @@ class LoadModelDemo {
           './imgs/cubemaps/CM1/negy.jpg',
           './imgs/cubemaps/CM1/posz.jpg',
           './imgs/cubemaps/CM1/negz.jpg',
-      ]);
+      ]);*/
       //this._scene.background = texture;
       //this._scene.background
   
