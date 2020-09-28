@@ -148,9 +148,12 @@
     </div>
  </section>
  <!-- End About -->
- 
+ <div class="transitiontoskills2">
+     <!--<img src="imgs/whitecloudish.png">-->
+     <img src="imgs/fadetoyellow.png">
+ </div>
   <section class="skills">
-  	 <div class="container">
+  	 <div class="container" syle="color: transparent">
   	 	 <div class="row align-items-center">
   	 	 	 <div class="skills-content">
   	 	 	 	<div class="row">
@@ -449,25 +452,7 @@
  						<p></p>
  					</div>
                  </div>
-                 <form class="form_class" method="POST" style="display:none;" id="sendForm" action="https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/supportticket/supportticket.php">
-                    <table border="0" align="center" cellpadding="5">
-                        <tr>
-                            <td align="right">Username:</td>
-                            <td><input id ="myUsername" type="TEXT" name="u" required/></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Email:</td>
-                            <td><input id="myEmail" type="TEXT" name="e" required/></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Message:</td>
-                            <td><input id="myMessage" type="TEXT" name="m" required/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center"><input type="SUBMIT" name="btnSubmit" value="Log In" required/></td>
-                        </tr>
-                    </table>
-                </form>
+                 
                 <script>
                     function LinkForms()
                     {
@@ -477,7 +462,7 @@
                     }
                     function SubmitFakeForm()
                     {
-                        document.getElementById("sendForm").submit();
+                        document.TheForm.submit();
                     }
                 </script>
  				<div class="row space-between">
@@ -492,12 +477,31 @@
  					<div class="col-12">
  						<textarea oninput="LinkForms()" id = "myMessage2" class="form-control" placeholder="Your Comment"></textarea>
  					</div>
- 				</div>
- 				<div class="row">
+                 </div>
+                <form name = "TheForm" class="form_class" method="POST" id="sendForm" action="https://app-3ee887a2-9c63-4544-b696-68a1e1cb208a.cleverapps.io/sqlconnect/supportticket/supportticket.php">
+                    <table border="0" align="center" cellpadding="5">
+                        <tr style="display:none;">
+                            <td align="right">Username:</td>
+                            <td><input id ="myUsername" type="TEXT" name="u" required/></td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td align="right">Email:</td>
+                            <td><input id="myEmail" type="TEXT" name="e" required/></td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td align="right">Message:</td>
+                            <td><input id="myMessage" type="TEXT" name="m" required/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><input type="SUBMIT" class="button" name="submit" value="Submit" required/></td>
+                        </tr>
+                    </table>
+                </form>
+ 				<!--<div class="row">
  					<div class="button text-right">
  						<button class="button" onclick="SubmitFakeForm()">Get In Touch</button>
  					</div>
- 				</div>
+ 				</div>-->
  			</div>
  		</div>
  	</div>
