@@ -13,6 +13,7 @@ canvas{
 	left:0;
 	z-index: -1;
 	background-size:cover;
+	position: fixed;
 }
 body{
 	margin:0;
@@ -155,6 +156,17 @@ header .navbar ul li a.active::before{
 }
 
 /*Home Section*/
+.home1{
+	min-height: 100vh;
+	/*background-position: 1000px 500px; */
+	/*background-position: center;
+	background-attachment: fixed;
+	background-color: transparent;
+	background-size:cover;
+	background-position: center;
+	padding:15px;*/
+	position: fixed;
+}
 .home{
 	min-height: 100vh;
 	/*background-position: 1000px 500px; */
@@ -164,6 +176,7 @@ header .navbar ul li a.active::before{
 	background-size:cover;
 	background-position: center;
 	padding:15px;
+	background-attachment:scroll;
 }
 
 .home .full-screen{
