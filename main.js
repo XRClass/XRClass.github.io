@@ -154,7 +154,7 @@ class LoadModelDemo {
       const near = 0.2;
       const far = 1000.0;
       this._camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      this._camera.position.set(5, 7, 4);
+      this._camera.position.set(5, 8, 4);
       //this._camera.quaternion.set
   
       this._scene = new THREE.Scene();
@@ -176,12 +176,12 @@ class LoadModelDemo {
       light.shadow.camera.bottom = -100;
       this._scene.add(light);
   
-      light = new THREE.AmbientLight(0xFFFFFF, 4.0);
+      light = new THREE.AmbientLight(0xFFFFFF, 2.3);
       this._scene.add(light);
   
       const controls = new OrbitControls(
         this._camera, this._threejs.domElement);
-      controls.target.set(0, 12, 0);
+      controls.target.set(0, 10, 3);
       controls.update();
   
       /*const loader = new THREE.CubeTextureLoader();
@@ -307,8 +307,8 @@ class LoadModelDemo {
         if (this._previousRAF === null) {
           this._previousRAF = t;
         }
-  
         this._RAF();
+
   
         this._threejs.render(this._scene, this._camera);
         this._Step(t - this._previousRAF);
