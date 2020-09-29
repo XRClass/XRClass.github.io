@@ -269,7 +269,7 @@ header .navbar ul li a.active::before{
 /*About Me*/
 
 .about-me{
- padding:100px 15px;
+ /*padding:100px 15px;*/
  /*background-color: #ffffff;*/
  background-color: transparent;
 }
@@ -492,13 +492,43 @@ header .navbar ul li a.active::before{
 /*Skills*/
 .transitiontoskills2
 {
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
 	background-size: 100% 100%;
-	background-color: transparent;
+	width:100%;
+	height:100%;
 	color:white;
-	filter: white;
-	-webkit-filter: grayscale(0);
+	filter:white;
 	-webkit-filter: brightness(100);
-	/*background-image: url(/imgs/export.png);*/
+	filter:blur(100);
+	-webkit-filter: grayscale(1000);
+	filter:brightness(800000000);
+	
+	object-fit: cover;
+	padding:0px;
+	display:flex;
+}
+.transitiontoskills3
+{
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
+	/*background-size: 100% 100%;
+	width:100%;
+	height:50%;
+	color:white;
+	filter:white;
+	-webkit-filter: brightness(100);
+	-webkit-filter: grayscale(0);
+	filter:brightness(100);*/
+	/*object-fit: cover;
+	padding:0px;
+	/*display:flex;
+	transform: translateZ(-50);*/
+	display: inline-block;
+	overflow:hidden;
+	margin-bottom: -40px;
+	z-index: -3;
+	overflow:hidden;
 }
 .transitiontoskills2 img
 {
@@ -510,8 +540,10 @@ header .navbar ul li a.active::before{
 	color:white;
 	filter:white;
 	-webkit-filter: brightness(100);
-	-webkit-filter: grayscale(0);
+	-webkit-filter: grayscale(100);
 	object-fit: cover;
+	padding:0px;
+	display:flex;
 	
 }
 .transitiontoskills img{
@@ -521,7 +553,7 @@ header .navbar ul li a.active::before{
 .skills{
  /*padding:100px 15px;*/
  background-color: white;
-}
+}ye
 .skills .skills-content{
 	flex: 0 0 50%;
 	max-width: 50%;
