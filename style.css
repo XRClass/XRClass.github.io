@@ -568,8 +568,9 @@ header .navbar ul li a.active::before{
 	align-items: center;
 }
 .skills .img img{
-  width: 100%;
-  display: block;
+  display: flex;
+  padding-left: 3rem;
+  -webkit-filter: grayscale(50%);
 }
 .skills .skills-content .section-title p{
  font-size: 15px;
@@ -589,6 +590,8 @@ header .navbar ul li a.active::before{
 	font-size: 16px;
 	font-weight: 500;
 	color:#000000;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
 	margin:0 0 8px;
 }
 
@@ -606,6 +609,15 @@ header .navbar ul li a.active::before{
 	height: 100%;
 }
 
+.skills .skills-content .skill-box .skill-bar .skill-bar-in:hover{
+	background-color:#000000;
+	bottom:0;
+	left:0;
+	height: 100%;
+	animation: pulse .5s infinite;
+	animation-direction: alternate;
+}
+
 .skills .skills-content .skill-box .skill-bar .skill-bar-in span{
 	color:#838383;
 	font-size: 16px;
@@ -614,6 +626,7 @@ header .navbar ul li a.active::before{
 	right:0;
 	top:-30px;
 }
+
 
 
 
@@ -869,8 +882,8 @@ max-width: 100%;
 .foundrs
 {
 	height:100px;
-	/*width: 100px;*/
-	overflow: hidden;
+	position: absolute;
+	flex: 0 0 100%;
 	/*border-radius: 50%;*/
 }
 .testimonials .testimonials-content .testi-slider{
