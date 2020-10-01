@@ -575,14 +575,23 @@ header .navbar ul li a.active::before{
   padding-left: 3rem;
   /*width:100%;*/
   flex:100%;
-  -webkit-filter: grayscale(50%);
+  /*-webkit-filter: grayscale(50%);*/
+}
+#ggradient{
+	
+    background-image: url('imgs/Capture1.PNG');
+    width: 200px;
+    height: 300px;
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 8px 8px rgb(0, 0, 0) inset;
+}
 }
 
 .skills .img img{
 	flex: 100%;
 	padding-left: 3rem;
 	width:100%;
-	-webkit-filter: grayscale(50%);
+	/*-webkit-filter: grayscale(50%);*/
 }
 
 .skills .skills-content .section-title p{
