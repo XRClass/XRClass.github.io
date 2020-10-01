@@ -524,6 +524,8 @@ header .navbar ul li a.active::before{
 	padding:0px;
 	/*display:flex;
 	transform: translateZ(-50);*/
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
 	display: inline-block;
 	overflow:hidden;
 	margin-bottom: -40px;
