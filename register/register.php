@@ -1,4 +1,5 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 $error = NULL;
 
 if(isset($_POST['submit'])){
@@ -71,7 +72,7 @@ if(isset($_POST['submit'])){
         //mysqli_query($con, "INSERT INTO `players`(`id`, `username`, `password`) VALUES ('4', '$u', '$p');") or die("4: Failed To Write User Data To Database!"); // Error #4 Failed To Write User Data To Database
         //$to = $e;
         $subject = "XRClass Email Verification";
-        $message = "Hello ". $u . ",\nPlease verify your account using this link: "."<a href='http://localhost/registration/verify.php?vkey=$vkey'>Register Account</a>";
+        $message = "Hello '$u',\nPlease verify your XR Class account using this link: "."<a href='http://localhost/registration/verify.php?vkey=$vkey'>Register Account</a>";
         //$headers = "From: xrinclass@gmail.com";
         //$headers .= "MIME-Version: 1.0" . "\r\n";
         //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
