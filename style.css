@@ -526,11 +526,16 @@ header .navbar ul li a.active::before{
 	transform: translateZ(-50);*/
 	-webkit-transform: scaleY(-1);
 	transform: scaleY(-1);
-	display: inline-block;
-	overflow:hidden;
-	margin-bottom: -40px;
-	z-index: -3;
-	overflow:hidden;
+	background-size: 100% 100%;
+	width:100%;
+	height:100%;
+	color:white;
+	filter:white;
+	object-fit: cover;
+	padding:0px;
+	display:flex;
+	background-color: #f5f8fd;
+	
 }
 .transitiontoskills2 img
 {
@@ -569,6 +574,34 @@ header .navbar ul li a.active::before{
 .align-items-center{
 	align-items: center;
 }
+#reflection {
+	width: 500px;
+	height: 330px;
+	position: relative;
+	background: url("imgs/HatchfulExport-All/logo_transparent.png");
+	background-position: bottom;
+	background-size: cover;
+	background-color: white;
+}
+#reflection:after {
+	content:"";
+	background-image: inherit;
+	width:inherit;
+	height: 40%;
+	position: absolute;
+	bottom: -41%;
+	transform: scaleY(-1);
+	background-position: bottom;
+	background-size: cover;
+}
+.reflection::before{
+	content:'';
+	width: inherit;
+	height: 32%;
+	position: absolute;
+	bottom: -42%;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.3),white);
+}
 .skills.img
 {
 	flex:100%;
@@ -582,8 +615,9 @@ header .navbar ul li a.active::before{
 #ggradient{
 	
     background-image: url('imgs/Capture1.PNG');
-    width: 200px;
-    height: 300px;
+	width: 300px;
+	padding-right: 3rem;
+    height: 350px;
     /* you need to match the shadow color to your background or image border for the desired effect*/
     box-shadow: 0 0 8px 8px rgb(0, 0, 0) inset;
 }
