@@ -548,16 +548,24 @@ header .navbar ul li a.active::before{
 	transform: translateZ(-50);*/
 	-webkit-transform: scaleY(-1);
 	transform: scaleY(-1);
+	/*background-size: 100% 100%;*/
+	/*width:100%;
+	/*height:100%;
+	/*color:white;
+	/*filter:white;
+	/*object-fit: cover;
+	/*padding:0px;
+	/*display:flex;
+	/*background-color: #f5f8fd;*/
+	/*opacity: 000%;
+	/*background: linear-gradient(to bottom, rgb(245, 248, 253),rgb(0, 0, 0));
+	*/
+	max-width: 100%;
+	height:102%;
+	background-color : rgb(245,248,253);
 	background-size: 100% 100%;
-	width:100%;
-	height:100%;
-	color:white;
-	filter:white;
-	object-fit: cover;
-	padding:0px;
 	display:flex;
-	background-color: #f5f8fd;
-	
+	overflow: hidden;
 }
 .transitiontoskills2 img
 {
@@ -577,7 +585,7 @@ header .navbar ul li a.active::before{
 }
 .transitiontoskills img{
 	width:100%;
-	background-color: transparent;
+	background-color: black;
 }
 .skills{
  /*padding:100px 15px;*/
@@ -639,10 +647,10 @@ header .navbar ul li a.active::before{
     background-image: url('imgs/Capture1.PNG');
 	width: 300px;
 	padding-right: 3rem;
+	margin-left: 10rem;
     height: 350px;
     /* you need to match the shadow color to your background or image border for the desired effect*/
     box-shadow: 0 0 8px 8px rgb(0, 0, 0) inset;
-}
 }
 
 .skills .img img{
@@ -935,6 +943,7 @@ position: relative;
 overflow:hidden;
 flex: 0 0 100%;
 max-width: 100%;
+max-height: 100%;
 }
 
 .testimonials .testimonials-content .testi-slider .slide{
@@ -947,23 +956,43 @@ max-width: 100%;
 	flex-wrap: nowrap;
 	float: left;
 	width: 100%;
+	height:100%;
 }
 .testimonials .testimonials-content .testi-slider .slide .img{
-	flex:0 0 128px;
-	max-width:128px;
+	/*flex:0 0 128px;*/
+	/*max-width:256px;
+	max-height:256px;
+	/*position:relative;*/
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	overflow:hidden;
+	/*margin-left:auto;
+	margin-right:auto;
+	/*padding:10px;*/
 }
 .testimonials .testimonials-content .testi-slider .slide p{
  font-size: 15px;
  font-weight: 400;
  line-height:24px;
  color:#838383;
- margin:0;
+ /*margin:auto;
+ padding:10px;*/
 }
 .foundrs
 {
-	height:100px;
-	position: absolute;
-	flex: 0 0 100%;
+	display: flex;
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	overflow:hidden;
+	max-height: 3300px;
+	max-width: 800px;
+	/*margin:0px;
+	
+	
+	/*position: absolute;
+	/*flex: 0 0 100%;
 	/*border-radius: 50%;*/
 }
 .testimonials .testimonials-content .testi-slider{
@@ -997,7 +1026,54 @@ max-width: 100%;
   background-color: #000000;
 }
 
+/*3D Gallery*/
+.CBOXX{
+	display: flex;
+	justify-content: center;
+	min-height: 50vh;
+	background: #000;
+}
+.cbox{
+	position: relaive;
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation: animate 40s linear infinite;
 
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: perspective(1000px) rotateY(0deg);
+	}
+	100%
+	{
+		transform: perspective(1000px) rotateY(360deg);
+	}
+}
+.cbox span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform-style: preserve-3d;
+	transform: rotateY(calc(var(--i)*36deg)) translateZ(400px);
+	-webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #0004);
+}
+
+.cbox span img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
 
 /*Blogs*/
 .blogs{
