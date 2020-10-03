@@ -118,7 +118,7 @@ header .navbar ul{
 }
 header .navbar ul li{
 	display: inline-block;
-	margin-left:35px;
+	margin-left:30px;
 }
 header .navbar ul li a{
 	font-size: 15px;
@@ -274,6 +274,7 @@ header .navbar ul li a.active::before{
 {
 	background-color: #000000;
 	color:#ffffff;
+	cursor:pointer;
 }
 
 
