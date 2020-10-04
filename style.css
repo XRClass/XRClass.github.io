@@ -521,10 +521,10 @@ header .navbar ul li a.active::before{
 	height:100%;
 	color:white;
 	filter:white;
-	-webkit-filter: brightness(100);
+	/*-webkit-filter: brightness(100);*/
 	filter:blur(100);
 	-webkit-filter: grayscale(1000);
-	filter:brightness(800000000);
+	/*filter:brightness(800000000);*/
 	
 	object-fit: cover;
 	padding:0px;
@@ -561,7 +561,8 @@ header .navbar ul li a.active::before{
 	/*background: linear-gradient(to bottom, rgb(245, 248, 253),rgb(0, 0, 0));
 	*/
 	max-width: 100%;
-	height:102%;
+	min-width: 100%;
+	height:104%;
 	background-color : rgb(245,248,253);
 	background-size: 100% 100%;
 	display:flex;
@@ -576,7 +577,7 @@ header .navbar ul li a.active::before{
 	height:100%;
 	color:white;
 	filter:white;
-	-webkit-filter: brightness(100);
+	/*-webkit-filter: brightness(100);*/
 	-webkit-filter: grayscale(100);
 	object-fit: cover;
 	padding:0px;
@@ -1032,6 +1033,8 @@ max-height: 100%;
 	justify-content: center;
 	min-height: 50vh;
 	background: #000;
+	max-width: 100%;
+	min-width: 100%;
 }
 .cbox{
 	position: relaive;
