@@ -1046,6 +1046,17 @@ max-height: 100%;
 	animation: animate 40s linear infinite;
 
 }
+
+.REDHiLite h6
+{
+	color : transparent;
+}
+
+.REDHiLite :hover h6
+{
+	color : red;
+}
+
 @keyframes animate
 {
 	0%
